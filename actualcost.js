@@ -1,4 +1,5 @@
 const actualCost = document.querySelector('span#actual-cost');
+const submitBtn = document.querySelector('button#submit-button');
 
 function getValues() {
     let inputs = document.getElementsByClassName('text-input-field')
@@ -27,3 +28,5 @@ function calActualCost() {
     let finalCost = tripTotalCost + myOppotunityCost - values['offsets'] + values['itemcost'];
     actualCost.innerText = finalCost.toFixed(2);
 }
+
+submitBtn.addEventListener('click', calActualCost);
