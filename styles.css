@@ -15,6 +15,10 @@ input {
     margin: 3px;
 }
 
+small::before {
+    content: '*';
+}
+
 span#actual-cost {
     font-size: 4rem;
 }
