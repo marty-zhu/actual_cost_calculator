@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>My Actual Cost Calculator</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <h1>Actual Cost Calculator</h1>
+  <section id="theitem">
+    <h3>About the item:</h3>
+    <div>
+      <label for="">Cost of the item in $USD: 
+        <input class="text-input-field" id="itemcost" type="text" placeholder="0" value="0">
+      </label>
+    </div>
+  </section>
+  <section id="thetrip">
+    <h3>About the Trip:</h3>
+    <div id="trip-type">
+      <label for="one-way-selection">One-way
+        <input id="radio-oneway" type="radio" name="trip-type" checked="checked" value="1" required>
+      </label>
+      |
+      <label for="roundtrip-selection">Roundtrip
+        <input id="radio-roundtrip" type="radio" name="trip-type" value="2" required>
+      </label>
+    </div>
+    <div>
+      <label for="distance-input">Input the one-way distance: 
+        <input class="text-input-field" id="distance" type="text" placeholder="miles" required value="0">
+      </label>
+    </div>
+    <div>
+      <label for="time-input">Time for oneway trip: 
+        <input class="text-input-field" id="time" type="text" placeholder="hours" required value="0">
+      </label>
+    </div>
+    <div>
+      <label for="">Other costs: 
+        <input class="text-input-field" id="other" type="text" placeholder="tolls, etc." value="0">
+      </label>
+    </div>
+  </section>
+  <hr>
+  <section id="myeconomics">
+    <h3>My economics:</h3>
+    <div>
+      <label for="">My cost per hour in $USD: 
+        <input class="text-input-field" id="myhourlyrate" type="text" placeholder="50" required value="50">
+      </label>
+    </div>
+    <div>
+      <label for="">Gas prices per gallon in $USD: 
+        <input class="text-input-field" id="gasprice" type="text" required value="5.25">
+      </label>
+    </div>
+    <div>
+      <label for="">Average miles per gallon of my vehicle: 
+        <input class="text-input-field" id="fueleconomy" type="text" placeholder="31" required value="31">
+      </label>
+    </div>
+    <div>
+      <label for="">Any offsets in $USD: 
+      <input class="text-input-field" id="offsets" type="text" placeholder="0" required value="0">
+      </label>
+    </div>
+  </section>
+  <hr>
+  <button onclick="calActualCost()" id="submit-button" type="button">Submit</button>
+  <br>
+  <p>
+  <strong>Actual Cost:</strong>
+  $<span id="actual-cost">0</span>
+  </p>
+</body>
+<script src="actualcost.js"></script>
+</html>

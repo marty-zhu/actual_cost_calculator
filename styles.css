@@ -1,0 +1,20 @@
+* {
+    font-family: Helvetica, Sans-serif;
+}
+
+body {
+    padding: 0;
+}
+
+h3 {
+    background-color: gray;
+    color: white;
+}
+
+input {
+    margin: 3px;
+}
+
+span#actual-cost {
+    font-size: 4rem;
+}
